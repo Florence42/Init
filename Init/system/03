@@ -1,0 +1,30 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    03                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/25 14:30:47 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/25 15:16:47 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Quel est le fichier à modifier pour rendre cela permanent ?
+
+Le nouveau nom est new_name
+L'ancien est old_name
+
+Si on avait juste lancer hostename new_name, il faut modifier le fichier
+/etc/hostname en remplacant old_name par new_name
+
+Ou alors :
+
+faire hostnamectl set-hostname new_name
+Cela modifie le fichier /etc/hostname en remplacant old_name par new_name
+
+Ensuite si on veut etre clean
+
+2- Editer le fichier /etc/hosts et remplacer old_name par new_name
+   127.0.1.1  frivaton.42.fr new_name
+
+3- Pour verifier que cela a change lamcer hostnamectl cela affiche new_name

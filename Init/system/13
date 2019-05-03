@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    13                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/25 16:30:00 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/28 08:14:49 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Trouvez une commande qui permet, en temps réel, de trouver les processus en
+# cours d’exécution
+
+#!/bin/sh
+ps -aux
+
+
+#https://buzut.fr/101-commandes-indispensables-sous-linux/

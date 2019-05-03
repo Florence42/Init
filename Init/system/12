@@ -1,0 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    12                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/25 16:19:21 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/25 16:29:40 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Déterminez la taille exacte de chaque dossier de /var d’une manière humainement
+# compréhensible suivi du chemin de celui-ci.
+
+#!/bin/sh
+du -ah /var

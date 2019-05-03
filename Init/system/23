@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    23                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/29 10:32:53 by frivaton          #+#    #+#              #
+#    Updated: 2019/02/01 09:25:12 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Expliquez comment se connecter en tant que ce nouvelle utilisateur. (En session
+#  graphique et en session ssh)
+
+En graphique  : ssh -X new_user@10.13.12.13
+
+En session ssh : ssh new_user@10.13.12.13

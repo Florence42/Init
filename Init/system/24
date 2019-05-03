@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    24                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/29 10:37:56 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/31 11:08:35 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Quelle commande permet de lister tout les packages INSTALLÉS sur la machine ?
+
+#Liste avec les informations de version et d'architecture et une description, dans un tableau :
+dpkg-query -l
+
+
+#Lise avec seulement les noms de paquet, un par ligne :
+dpkg-query -f '${binary:Package}\n' -W

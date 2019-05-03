@@ -1,0 +1,48 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/02/01 09:14:16 by frivaton          #+#    #+#              #
+#    Updated: 2019/02/01 15:27:26 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Réalisez un script qui permet de supprimer un user LOGUÉ sur la machine
+
+#!/bin/sh
+if [ $1 ] ; then
+	sudo passwd -l $1
+	if sudo pgrep -u $1 >/dev/null; then
+		sudo ps -fp $(pgrep -u $1) >/dev/null
+		killall -KILL -u $1
+	fi
+	userdel -r $1 >/dev/null
+	crontab -r -u $1 >/dev/null
+else
+	echo "Enter a user ...!"
+fi
+
+
+# Avant de supprimer l’utilisateur, il est important de bloquer son compte.
+# On utilise la commande suivante pour ce faire :
+#sudo passwd -l toto
+
+# On ne peut supprimer un compte de quelqu’un logué sur la machine.
+# On va donc fermer l’ensemble des programmes lancés par cet utilisateur ainsi que sa connexion.
+# La commande suivante liste les pid de ces programmes :
+#sudo pgrep -u toto
+
+# Si vous souhaitez voir les programmes lancés par l’utilisateur, lancez cette commande :
+#sudo ps -fp $(pgrep -u toto)
+
+# Si la commande a retourné quelque chose, utilisez les commandes suivantes pour fermer les programmes :
+#killall -KILL -u toto
+
+# On peut ensuite supprimer l’utilisateur toto et son répertoire "home" ainsi que sa boîte
+# email (avec l’option -r) avec la commande userdel :
+#userdel -r toto
+
+# Si l’utilisateur a des tâches CRON dans son fichier crontab, supprimez les avec la commande :
+#crontab -r -u toto

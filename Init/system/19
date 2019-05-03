@@ -1,0 +1,60 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    19                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/28 16:15:49 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/31 13:19:48 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Listez les services qui se lancent automatiquement lorsque la machine boot et
+# indiquez le nom donné à ce type de service
+
+[ - ]  alsa-utils
+[ - ]  anacron
+[ + ]  avahi-daemon
+[ - ]  bluetooth
+[ - ]  console-setup.sh
+[ + ]  cron
+[ + ]  cups
+[ + ]  cups-browsed
+[ + ]  dbus
+[ - ]  gdm3
+[ - ]  hwclock.sh
+[ - ]  keyboard-setup.sh
+[ + ]  kmod
+[ + ]  lightdm
+[ + ]  minissdpd
+[ + ]  network-manager
+[ + ]  networking
+[ - ]  pppd-dns
+[ + ]  procps
+[ + ]  rsyslog
+[ - ]  saned
+[ + ]  speech-dispatcher
+[ + ]  ssh
+[ - ]  sudo
+[ + ]  udev
+[ + ]  unattended-upgrades
+[ - ]  x11-common
+
+#-----------------------------
+#Le nom est : daemon ou demon
+
+
+
+# sysv-rc-conf --list 
+# sysv-rc-conf permet également de lister tous les services et leurs runlevels.
+# Ca permet d’avoir une vue d’ensemble rapidement
+
+
+# service --status-all
+
+
+# https://wiki.debian.org/fr/Daemon
+# https://www.memoinfo.fr/tutoriels-linux/gestion-services-debian/
+# sous /etc/
+# ls -Rtl rc*.* | grep S > lio
+# cut -d '/' -f 3 lio

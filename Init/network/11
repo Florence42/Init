@@ -1,0 +1,37 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    11                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/24 16:47:59 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/24 16:51:12 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Trouvez grâce au résultat de la commande précédente le nom et l’IP du matériel
+# qui fait le lien entre vous (réseau local) et l’extérieur
+
+name: nat-1\nip:   10.60.1.11
+
+# 'nat' stands for 'Network Address Translation'. nat1 is the device that makes the link between local network and 
+# outside world
+# -------------------------------------------------------------------------------------
+➜  network traceroute  slash16.org
+traceroute: Warning: slash16.org has multiple addresses; using 54.192.185.184
+traceroute to slash16.org (54.192.185.184), 64 hops max, 52 byte packets
+1  10.13.254.254 (10.13.254.254)  1.263 ms  0.893 ms  1.102 ms
+2  nat-1 (10.60.1.11)  0.221 ms  0.259 ms  0.252 ms
+3  dc3 (62.210.35.1)  2.101 ms  1.575 ms  1.703 ms
+4  195.154.1.174 (195.154.1.174)  1.165 ms  1.201 ms  1.228 ms
+5  a9k2-45x-s44-2.dc3.poneytelecom.eu (195.154.1.106)  1.228 ms  1.252 ms  1.105 ms
+6  amazon-th2.par.franceix.net (37.49.236.118)  1.175 ms  1.044 ms  1.121 ms
+7  52.93.16.100 (52.93.16.100)  24.853 ms
+52.93.16.116 (52.93.16.116)  3.686 ms  3.637 ms
+8  52.93.16.127 (52.93.16.127)  1.333 ms
+52.93.16.109 (52.93.16.109)  1.458 ms
+52.93.16.47 (52.93.16.47)  2.306 ms
+9  176.32.124.129 (176.32.124.129)  1.310 ms
+176.32.124.135 (176.32.124.135)  1.304 ms  1.389 ms
+10  * * *
+11  * * *

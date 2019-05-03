@@ -1,0 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    05                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/24 08:48:31 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/24 15:02:14 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Identifiez l’IP du serveur DNS qui répond sur le domaine suivant : slash16.org
+
+#!/bin/sh
+nslookup slash16.org | grep Server

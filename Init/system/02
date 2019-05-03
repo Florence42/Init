@@ -1,0 +1,39 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/25 12:47:35 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/31 10:11:46 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Quelle commande permet de renommer votre système ?
+
+hostname
+
+#Le nouveau nom est new_name
+#L'ancien est old_name
+
+#Pour le modifier de facon non permanente :
+
+#hostname new_name
+
+#Quand on lance hostanme cela affiche new_name, mais le fichier /etc/hosts
+#n'est pas modifie.
+
+
+
+
+#----------------------------------------------------------------------------
+#Pour le modifier de facon permanente
+
+
+#1- faire hostnamectl set-hostname new_name
+#   Cela modifie le fichier /etc/hostname en remplacant old_name par new_name
+
+#2- Editer le fichier /etc/hosts et remplacer old_name par new_name
+#   127.0.1.1  frivaton.42.fr new_name
+
+#3- Pour verifier que cela a change lamcer hostnamectl cela affiche new_name

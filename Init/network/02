@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/24 08:19:31 by frivaton          #+#    #+#              #
+#    Updated: 2019/02/01 08:43:13 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Identifiez et affichez les caractéristiques de l’interface Ethernet :
+# (a) Indiquez l’adresse de Broadcast
+# (b) Indiquez toutes les adresses IP qui font partie du même sous-réseau
+
+#!/bin/sh
+ifconfig en0 | grep broadcast | cut -d " " -f6
+arp -a
+
+#La commande arp permet de visualiser ou modifier la table du cache ARP d’une 
+#interface. Elle donne la correspondance entre une adresse IP et une adresse MAC.
+#Le cache ARP de l’interface est mis à jour à chaque nouvelle requête.

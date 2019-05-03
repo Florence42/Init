@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/25 10:26:03 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/25 12:47:13 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Dans quel fichier se trouve la version installée de votre Debian ?
+
+dans /etc/debian_version
+
+cat /etc/debian_version --> version de debian
+9.7

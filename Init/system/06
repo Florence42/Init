@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    06                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/25 15:40:36 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/25 15:45:47 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Donnez une commande pour redémarrer le service SSH
+
+#!/bin/sh
+systemctl restart sshd
+
+#-------------------------------------------------------
+#Si ce dernier est arrêté, vous pouvez le démarrer avec la commande : systemctl start sshd
+
+#Si vous souhaitez le redémarrer dans le cas où vous avez modifié la configuration : systemctl restart sshd
+
+

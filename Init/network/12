@@ -1,0 +1,58 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    12                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/25 07:52:25 by frivaton          #+#    #+#              #
+#    Updated: 2019/02/01 09:00:15 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Trouvez l’IP qui vous a été assignée par le serveur dhcp
+
+# 10.13.12.13
+
+
+# -----------------------------------------------------------------------
+
+ifconfig en0 | grep "inet " | cut -d " " -f2
+
+# ------------------------------------------------------------------------
+# man networsetup
+
+#-listnetworkserviceorder
+#Displays a list of network services in the order they are contacted
+#for a connection, along with the corresponding port and device for each.
+#An asterisk (*) next to a service means the service is inactive.
+
+#➜  network networksetup -listnetworkserviceorder
+#An asterisk (*) denotes that a network service is disabled.
+#	(1) Ethernet
+#(Hardware Port: Ethernet, Device: en0)
+
+#	(2) Wi-Fi
+#(Hardware Port: Wi-Fi, Device: en1)
+
+#	(3) Bluetooth PAN
+#(Hardware Port: Bluetooth PAN, Device: en2)
+
+#	(4) Thunderbolt Bridge
+#(Hardware Port: Thunderbolt Bridge, Device: bridge0)
+
+#➜  network
+
+#Donc le device pour ethernet est en0, si on fait ifconfig en0 on a :
+#➜  network ifconfig en0
+#	en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+#	options=10b<RXCSUM,TXCSUM,VLAN_HWTAGGING,AV>
+#	ether 10:dd:b1:bd:e9:58
+#	inet6 fe80::14e1:9d2c:206e:3120%en0 prefixlen 64 secured scopeid 0x4
+#	inet 10.13.12.13 netmask 0xffff0000 broadcast 10.13.255.255
+#	nd6 options=201<PERFORMNUD,DAD>
+#    media: autoselect (1000baseT <full-duplex>)
+#	status: active
+#➜  network
+
+#Et l'adresse est donnee par inet : 10.13.12.13
+

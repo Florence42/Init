@@ -1,0 +1,98 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    08                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/24 15:03:56 by frivaton          #+#    #+#              #
+#    Updated: 2019/02/01 12:08:20 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Trouver chez quel hébergeur est le site de Slash16
+
+➜  network git:(master) ✗ nslookup Slash16.org
+Server:        10.51.1.42
+Address:    10.51.1.42#53
+
+Non-authoritative answer:
+Name:    Slash16.org
+Address: 54.192.185.220
+Name:    Slash16.org
+Address: 54.192.185.187
+Name:    Slash16.org
+Address: 54.192.185.86
+Name:    Slash16.org
+Address: 54.192.185.241
+
+
+➜  network git:(master) ✗ nslookup 54.192.185.220
+Server:        10.51.1.42
+Address:    10.51.1.42#53
+
+Non-authoritative answer:
+220.185.192.54.in-addr.arpa    name = server-54-192-185-220.cdg3.r.cloudfront.net.
+
+Authoritative answers can be found from:
+192.54.in-addr.arpa    nameserver = x4.amazonaws.org.
+192.54.in-addr.arpa    nameserver = x1.amazonaws.com.
+192.54.in-addr.arpa    nameserver = x2.amazonaws.com.
+192.54.in-addr.arpa    nameserver = pdns1.ultradns.net.
+192.54.in-addr.arpa    nameserver = x3.amazonaws.org.
+
+➜  network git:(master) ✗
+
+➜  network git:(master) ✗ whois amazonaws.org
+Domain Name: AMAZONAWS.ORG
+Registry Domain ID: D107210083-LROR
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2018-07-17T09:23:25Z
+Creation Date: 2005-08-18T02:19:24Z
+Registry Expiry Date: 2019-08-18T02:19:24Z
+Registrar Registration Expiration Date:
+Registrar: MarkMonitor Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Reseller:
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Registrant Organization: Amazon Technologies, Inc.
+Registrant State/Province: NV
+Registrant Country: US
+Name Server: PDNS1.ULTRADNS.NET
+Name Server: PDNS3.ULTRADNS.ORG
+
+
+
+#Organization:  Amazon Technologies, Inc.
+
+#Demarche :
+
+
+#➜  network ping slash16.org
+#PING slash16.org (143.204.222.8): 56 data bytes
+#64 bytes from 143.204.222.8: icmp_seq=0 ttl=245 time=1.220 ms
+#64 bytes from 143.204.222.8: icmp_seq=1 ttl=245 time=1.300 ms
+
+#On cherche a qui appartient 143.204.222.8: sur un site specialise 
+
+#http://whois.domaintools.com/143.204.222.8
+
+#IP Location    United States United States Seattle Amazon.com Inc.
+#ASN    United States AS16509 AMAZON-02 - Amazon.com, Inc., US (registered May 04, 2000)
+#Resolve Host    server-143-204-222-8.cdg3.r.cloudfront.net
+#Whois Server    whois.arin.net
+#IP Address    143.204.222.8
+#CIDR:           143.204.0.0/16
+#NetName:        AMAZO-CF
+#NetHandle:      NET-143-204-0-0-2
+#Parent:         AT-88-Z (NET-143-204-0-0-1)
+#NetType:        Reallocated
+#OriginAS:       AS16509
+#Organization:   Amazon.com, Inc. (AMAZON-4)<--------------------------------------------------------------------------

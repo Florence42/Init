@@ -1,0 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/24 08:06:57 by frivaton          #+#    #+#              #
+#    Updated: 2019/01/24 15:00:12 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Récupérez la liste des interfaces réseau de la machine sans afficher aucun détail
+# pour ces interfaces. Vraiment juste la liste des noms.
+
+#!/bin/sh
+ifconfig -a |grep UP | cut -d : -f1

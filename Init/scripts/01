@@ -1,0 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: frivaton <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/02/01 09:12:36 by frivaton          #+#    #+#              #
+#    Updated: 2019/02/01 09:12:57 by frivaton         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+# Réalisez un script qui affiche seulement le login, le UID et le Path de chaques
+# entrée du fichier /etc/passwd
+
+cat /etc/passwd | awk -F: '{print $1 "  " $3 "  " $6}' | column -t
+
